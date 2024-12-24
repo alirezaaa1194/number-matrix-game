@@ -13,7 +13,7 @@ body {
 
 @font-face {
   font-family: "Dana";
-  src: url("/public/fonts/Dana.woff2");
+  src: url("../public/fonts/Dana.woff2");
 }
 
 .game-info {
