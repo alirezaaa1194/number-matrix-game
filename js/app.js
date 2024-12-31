@@ -122,8 +122,10 @@ function calculateProduct() {
   return selectedCells.reduce((product, cell) => product * gameMatrix[cell.row][cell.col], 1);
 }
 
+
 function isWinningCombination(result) {
-  let maxProduct = -Infinity;
+
+  let maxProduct = 0;
 
   // بررسی تمام ترکیب‌های افقی
   for (let i = 0; i < gameMatrix.length; i++) {
