@@ -125,18 +125,21 @@ function calculateProduct() {
 function isWinningCombination(result) {
   let maxProduct = -Infinity;
 
+  // بررسی تمام ترکیب‌های افقی
   for (let i = 0; i < gameMatrix.length; i++) {
     for (let j = 0; j < gameMatrix.length - 3; j++) {
       maxProduct = Math.max(maxProduct, gameMatrix[i][j] * gameMatrix[i][j + 1] * gameMatrix[i][j + 2] * gameMatrix[i][j + 3]);
     }
   }
 
+  // بررسی تمام ترکیب‌های عمودی
   for (let i = 0; i < gameMatrix.length - 3; i++) {
     for (let j = 0; j < gameMatrix.length; j++) {
       maxProduct = Math.max(maxProduct, gameMatrix[i][j] * gameMatrix[i + 1][j] * gameMatrix[i + 2][j] * gameMatrix[i + 3][j]);
     }
   }
 
+  // بررسی تمام ترکیب‌های مورب
   for (let i = 0; i < gameMatrix.length - 3; i++) {
     for (let j = 0; j < gameMatrix.length - 3; j++) {
       maxProduct = Math.max(maxProduct, gameMatrix[i][j] * gameMatrix[i + 1][j + 1] * gameMatrix[i + 2][j + 2] * gameMatrix[i + 3][j + 3]);
